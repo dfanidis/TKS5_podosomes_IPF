@@ -1,0 +1,1 @@
+Data necessary for the recreation of computationally-shaped figures can be found at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8286980.svg)](https://doi.org/10.5281/zenodo.8286980)
