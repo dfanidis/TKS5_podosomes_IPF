@@ -16,6 +16,8 @@ stats <- list(
 	c = read.delim(file.path(inPath, 'GSE47460_GPL14550_stats_all.txt'))
 )
 
+gn <- c('SH3PXD2A', 'COL1A1')
+
 stats <- lapply(stats, function(x){
 	# Compute FDR
 	x$FDR <- p.adjust(x$Pval, method= 'fdr')
@@ -80,7 +82,7 @@ for(i in names(stats)) {
 # ============================================================
 data <- list(
 	b = read.delim(file.path(inPath, 'GSE47460_A_normalizedExpressionValues.txt')),
-	d = read.delim(file.path(inPath, 'GSE47460_B_normalizedExpressionValues.txt'))
+	d = read.delim(gzfile(file.path(inPath, 'GSE47460_B_normalizedExpressionValues.txt.gz')))
 )
 
 # Select SH3PXD2A, COL1A1
